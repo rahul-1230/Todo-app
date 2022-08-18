@@ -1,0 +1,39 @@
+
+
+<h1 class="mt-4">View Profile</h1>
+
+
+
+<!-- <p class="lead mb-3">Name :<%=user.name %></p>
+
+<p class="lead mb-3"> Username :<%= user.username %></p>
+<p class="lead mb-3"> Email :<%= user.email %></p>
+<p class="lead mb-3"> Password :<%= user.password %></p>
+<p class="lead mb-3"> profilepic : <img src="<%= user.profilepic %>" alt=""></p> -->
+
+ 
+<form action="/users/update" method="post">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" value="<%=user.name %>">
+    </div>
+    <div>
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" value="<%=user.username %>">
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="<%=user.email %>" disabled>
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" value="<%=user.password %>">
+    </div>
+    <!-- <div>
+        <label for="profilepic">Profile Pic</label>
+        <input type="text" id="profilepic" name="profilepic" value="<%=user.profilepic %>">
+    </div> -->
+    <div>
+       <button type="submit">Update</button>
+    </div>
+</form>
